@@ -1,9 +1,9 @@
 #include <stdio.h>
 
 /**
- *  * main - main function
- *   * Return: int
- *    */
+ * main - main function
+ * Return: int
+ */
 int main(void)
 {
 		char c;
