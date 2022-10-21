@@ -1,33 +1,42 @@
 #include <stdio.h>
-
 /**
- * main - main function
- * Return: always 0
- */
+* main - print first 98 fibonacci number
+*
+* Return: 0
+*/
+
 int main(void)
 {
-	unsigned long int t1, t2;
-	unsigned long int n;
-	int i;
+	unsigned long int i, j, k, j1, j2, k1, k2;
 
-	t1 = 1;
-	t2 = 2;
+	j = 1;
+	k = 2;
 
-	printf("%lu, %lu, ", t1, t2);
+	printf("%lu", j);
 
-	for (i = 3; i <= 98; i++)
+	for (i = 1; i < 91; i++)
 	{
-		n = t1 + t2;
-		t1 = t2;
-		t2 = n;
-
-		printf("%lu", n);
-
-		if (!(i == 98))
-			printf(", ");
-		else
-			printf("\n");
+		printf(", %lu", k);
+		k = k + j;
+		j = k - j;
 	}
+
+	j1 = j / 1000000000;
+	j2 = j % 1000000000;
+	k1 = k / 1000000000;
+	k2 = k % 1000000000;
+
+	for (i = 92; i < 99; ++i)
+	{
+		printf(", %lu", k1 + (k2 / 1000000000));
+		printf("%lu", k2 % 1000000000);
+		k1 = k1 + j1;
+		j1 = k1 - j1;
+		k2 = k2 + j2;
+		j2 = k2 - j2;
+	}
+
+	printf("\n");
 
 	return (0);
 }
