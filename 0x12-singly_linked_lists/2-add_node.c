@@ -1,4 +1,4 @@
-#include "lists.c"
+#include "lists.h"
 
 /**
  * add_node - add a node to the head of a list
