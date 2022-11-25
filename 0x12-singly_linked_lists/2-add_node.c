@@ -6,8 +6,8 @@
  * @head: list head
  * @str: string value
  * Return: pointer to new head node
- *
- * list_t *add_node(list_t **head, const char *str)
+ */
+list_t *add_node(list_t **head, const char *str)
 {
 	unsigned int len = 0;
 	list_t *new;
@@ -27,4 +27,4 @@
 	*head = new;
 
 	return (new);
-}/
+}
