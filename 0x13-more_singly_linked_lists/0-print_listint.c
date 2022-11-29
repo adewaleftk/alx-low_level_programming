@@ -1,5 +1,12 @@
 #include "lists.h"
 
+/**
+ * print_listint - print all the element of a listint list
+ *
+ * @h: listint_t
+ * Return: number of nodes
+ */
+
 size_t print_listint(const listint_t *h)
 {
 	listint_t *p = (listint_t *)h;
@@ -9,6 +16,7 @@ size_t print_listint(const listint_t *h)
 	{
 		printf("%d\n", p->n);
 		size++;
+		p = p->next;
 	}
 	return (size);
 }
